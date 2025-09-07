@@ -1,149 +1,83 @@
-<!DOCTYPE html>
-<html lang="ja">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>眠れぬ夜の雑記帳</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-        }
-        h1 {
-            color: #333;
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 10px;
-        }
-        .section {
-            margin: 20px 0;
-        }
-    </style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Parrhesia State</title>
+<meta name="keywords" content="キーワード" />
+<meta name="robots" content="index,follow" />
+<meta name="description" content="サイトの説明" />
+<meta name="Copyright" content="design now" />
+<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+<meta http-equiv="Content-Language" content="ja" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="imagetoolbar" content="no" />
+<link href="share/css/set/import.css" rel="stylesheet" type="text/css" media="all" />
+<link href="share/css/share.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.1.js"></script>
+<script type="text/javascript" src="share/js/supersized.1.0.js"></script>
+<script type="text/javascript" src="share/js/default.js"></script>
+<script type="text/javascript">
+
+$(function(){
+	$.fn.supersized.options = {
+		startwidth: 1024,
+		startheight: 768,
+		minsize: .50,
+		slideshow: 1,
+		slideinterval: 10000
+	};
+    $('#supersize').supersized();
+});
+
+</script>
+<style type="text/css">
+.auto-style2 {
+	font-size: large;
+}
+.auto-style3 {
+	text-align:left;
+}
+.auto-style4 {
+	text-align:right;
+	font-family: Verdana;
+	color: #FFFFFF;
+}
+.auto-style5 {
+	font-family: Verdana;
+	color: #FFFFFF;
+	font-size: small;
+}
+</style>
+
 </head>
 <body>
-    <h1>不真面目なプログラミング</h1>
-    
-    <div class="section">
-<h2>20250901</h2>
-そういえばプログラマーのゲイカップルって聞いたことないな。（天然記念物）<br>
-<br>
-バイナリ符号が動かなくなったので動くようにしてました。<br>
-なるほど、リードマラー符号は楽なのですね。<br>
-リスト復号の一段目の処理として、補間多項式を求めるための連立方程式の部分が出来た。<br>
-今日はここまでが限界だった。<br>
-パターソン復号と言ったら複雑極まりない。
-何回EEA使うんだという感じ。
-多項式の平方根とか。<br>
-ま、作ったからと言って使う宛があるというわけではないのですが、お守り扱いで。<br>
-不安なのよ。
-プライバシーと人生が。<br>
-パターソンとリスト復号の禁じられた結婚をイメージして作っています。<br>
-さて、いつ完成しますことやら。
-ミニHQCをgistに上げた。
-<br>
+	<div id="supersize">
+		<a class="activeslide" href="#"><img  src="images/01.jpg"/></a>
+		<a href="#"><img src="images/02.jpg"/></a>
+		<a href="#"><img src="images/03.jpg"/></a>
+		<a href="#"><img src="images/04.jpg"/></a>
+	</div>
+	
+	<div id="content">
+		<h1><a href="#" title="">Parrhesia State©</a></h1>
+		<ul>
+			<li><a href="./index1.html" title="">ご来訪の皆様に</a></li>
+			<li><a href="./index2.html" title="">アプリ</a></li>
+			<li><a href="./index3.html" title="">出版</a></li>
+			<li><a href="./index4.html" title="">研究テーマ</a></li>
+			<li><a href="./index5.html" title="">お問い合わせ</a></li>
+		</ul>
+<p class="auto-style1">
+<span class="auto-style1">accsess count:
+<font size=16>
+<span class="auto-style1">
+<script language="JavaScript" src="./counter.cgi"></script>
+</span><br/></font></span>
+</p>
 
-<h2>20250831</h2>
-ところで暗号ですが、リスト復号をやっています。<br>
-この復号法のいいところは、性能だけでなくランダムエラーに強いところです。
-ｔ個までのエラーを訂正できると言った時、エラーの数を固定する必要があったのですが、このリスト復号ではｔ以下のエラーも一回の計算で求められるところがすごいようです。<br>
-なので、HQCもどきも、素体上のRS符号をリスト復号で、外符号のバイナリエラーはパターソン復号をしようと思っています。
-いずれもシンドローム、あるいは受信語さえわかれば訂正に必要な全ての情報が計算できるようです。<br>
-パターソンでご訂正が起きて内符号で復号失敗率を０に出来たらいいんじゃないのかなーと思っています。
-素体って難しそうで結構シンプルです。<br>
-拡大帯みたいに学習が面倒じゃないし、素数って結構中途半端なサイズでも出来てしまうので、符号長が制限されていても幾つか符号の候補があります。<br>
-なので、明日は一日書けてリスト復号に挑戦します。
+	</div>
 
-
-<h2>20250829</h2>
-連接符号化の処理を完了。<br>
-全然完了って感じじゃないですが、いいのです。<br>
-連接というから符号を大きくするのかと思ったけど２段階に分けて符号化するって、これはインターリーブと違うのかしら？<br>
-途中で置換を入れることでエラーを拡散するという発想が素敵。<br>
-置換させる処理はまだドッキングできてません。（作ってあるけど）<br>
-途中で動かなくなって大変だったけど、なんとか復旧。<br>
-明日はどこまでやろうかな〜（さすらい）<br>
-
-
-<h2>20250827</h2>
-寝る前に一言。
-苦手な数学を克服したい。
-特に証明の理解は必須である。
-どれだけ計算問題を解いても、証明力は身につないので、暗号の実装と並行して代数学の勉強を始めたい。<br>
-<br>
-それはそうと今後の予定。
-ゴーレイ符号でHQCをやってみる。<br>
-<br>
-題してミニ・HQC。<br>
-乞うご期待。
-<br>
-で、ちょっと考えてみる。
-ゴーレイ符号の訂正能力は3つまで。
-つまり$xr_2$と$yr_1$のハミング重みはたかだか1でなければならない。
-$hr_2y$の重みは2とか3にする。
-これが消えると無事訂正できるという目論見である。<br>
-お目に止まればお慰み。
-
-
-<h2>20250728</h2>
-眠れないから調子に載ってプログラムをしていたら朝になった。<br>
-ちょっとは動くようになったかな？<br>
-
-<h2>20250725</h2>
-現時点では苦手なCで書いてますが、最終的にはRustに置き換えるかもしれません。<br>
-目標は耐量子計算機暗号のHQCとKyberの実装に供するものが目標。<br>
-上記のNaor-Yung暗号機能（CCA2）の実現を前提にしています。<br>
-NTRUもやるかもしれない（というかNTRUも素体上の多項式を使う）です。<br>
-NTRUはたった数百行で実装できてしまう、コンパクト暗号です。（安全性はまだ確立されてないようです。）<br>
-これなら電卓でも動かせますね？！<br>
-NISTの規格では、HQCはリードソロモン符号とリードマラー符号の連接を用いていますが、<br>
-もし素体上のGoppa符号とゴーレイ符号を連接させたら安全性はどうなるかも検証したいです。<br>
-
-<h2>20250723</h2>
-Cは苦手なので、この際だから新しい言語Rustで書いてみようか画策中。<br>
-でも難しいと言われているので自身がない。<br>
-またヘタで罵詈雑言を浴びるのかと思うと、本当に自分のためになるのかどうか怪しい。<br>
-でも、面白いと思うからやるのであって、どうせ誰も見てないし、使わないだろう。<br>
-そんな感じでグダグダ今日も下手くそなコードを書いている。<br>
-オライリーはわからない。<br>
-パイソンはpython3とか打つのが面倒くさい。<br>
-p3でいいじゃんね。<br>
-まあそのへんは適当に。<br>
-
-<h2>20250722</h2>
-ナオヤの暗号とリンクさせる予定。
-他のプログラムはほとんど同じなので非公開にしました。
-
-<h2>20250708</h2>
-心機一転リニューアルしました。
-この際死んでるリポジトリは全部捨てて、このリポジトリとインチキModule-LWEをメンテナンスしようかと思っています。
-応援してね。
-安全性の証明も勉強中です。<br>
-
-<h2>20231123</h2>
-今日になってバグが見つかって、直したかと思ったら全く動かないのでなんだこれはと思ったら全部間違いだった。
-<br>>
-とりあえず動くように？したけど動く時があるという程度だし、生成行列もでたらめなので、もう一度論文に目を通さなければならない。
-いつもの事である。
-<h2>20231111</h2>
-とりあえず面倒なこと一切抜きにして、一番単純な答えがこれだろうと思って公開しました。  
-素体上で動かすとどういう訳か早いです。
-<br>
-拡大体を扱うための議論が必要なくなるというのは結構楽です。
-今後この符号の性能や、高速な復号手順を調べていきたいと思います。
-<br>
-実装にあたり、ピーターソン復号法は以下の参考文献を見ました。
-ほかの復号法も攻略できるかも。
-<br>
-<br>
-参考文献：代数系と符号理論（オーム社）
-    </div>
-
-    <div class="section">
-        <h2>Contact</h2>
-        <p>himitz</p>
-    </div>
 </body>
 </html>
-
